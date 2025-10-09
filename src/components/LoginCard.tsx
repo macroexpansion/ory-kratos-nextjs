@@ -63,6 +63,7 @@ export function LoginFormSsoButton({ node }: OryNodeSsoButtonProps) {
       headers: {
         "Content-Type": "application/json",
       },
+      credentials: "include", // 👈 THIS IS CRUCIAL
     });
     const oauth2Success = await response.json();
 
